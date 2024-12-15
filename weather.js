@@ -38,9 +38,13 @@ function fetchWeather(city) {
     }, 500);
 }
 
-// let message = 'Hello Developer'
+// When this app initializes we are calling createEffect which will create an effect,
+// with this function as a variable
+createEffect(function() {
+    fetchWeather(state.selectedCity);
+}) 
 
-function renderApp() {
+createEffect(() => {
     render('#container', `<select onChange=updateSelectedCity(this.value)>
         <option value="Tokyo">Tokyo</option>
         <option value="London">London</option>
@@ -52,15 +56,9 @@ function renderApp() {
         <p>Humidity: ${state.weather.humidity}</p>
         <p>Description: ${state.weather.description}</p>
         </div>`) 
-}
+})
 
 function updateSelectedCity(city) {
     state.selectedCity = city
     fetchWeather(city)
 }
-
-renderApp()
-
-setTimeout(() => {
-    state.message = 'Hello Deveoper'
-}, 1000);
