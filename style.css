@@ -1,1 +1,38 @@
+/* Resetting some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Basic styling for the body */
+body {
+  font-family: Arial, sans-serif; /* You can change this to any font you like */
+  background-color: #2e5677;  /* Light background color */
+  min-height: 100vh;  /* Ensure the body takes full screen height */
+  display: flex;
+  justify-content: center;  /* Horizontally centers the container */
+  align-items: center;  /* Vertically centers the container */
+}
+
+/* Styling for the container */
+#container {
+  width: 80%;  /* You can set this to any desired width */
+  max-width: 500px;  /* Set a max-width to prevent the container from growing too large */
+  padding: 20px;
+  background-color: #ffffff;  /* White background for the container */
+  border-radius: 10px;  /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  text-align: center;  /* Centers text inside the container */
+}
+
+/* Optional: Style for content inside the container */
+#container h1 {
+  color: #333;  /* Dark gray text */
+  font-size: 2rem;
+}
+
+#container p {
+  color: #000000;
+  font-size: 1rem;
+}
