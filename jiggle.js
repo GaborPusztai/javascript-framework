@@ -3,7 +3,7 @@ const depsMap = new Map()
 let currentEffect = null
 effectsStack = []
 
-// the (fn) variable represents the function() {fetchWeather(state.selectedCity);} function from the 'weather.js'
+// the (fn) variable represents the function() {fetchWeather(state.selectedCity);} from the 'weather.js'
 // and we are creating a function called effect which will be the effect function that is then going to be saved inside of our dependencies map
 function createEffect(fn) {
     const effect = function effect(...args) {
